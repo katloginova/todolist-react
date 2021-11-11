@@ -1,0 +1,16 @@
+.login{
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 500px;
+    background-color: cadetblue;
+}
+
+.login .login__title{
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.login .login__btn{
+    margin-left: 20px;
+}
