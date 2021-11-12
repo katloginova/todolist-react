@@ -1,8 +1,10 @@
 import React from "react";
+import './style.css';
 
-function InputText() {
+function InputText(props) {
+  const {nameInput, valueInput} = props;
     return (
-        <input type="text" />
+        <input className={`input ${nameInput}`} type="text" value={valueInput}/>
     );
   }
   

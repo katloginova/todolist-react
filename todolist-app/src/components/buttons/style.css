@@ -1,8 +1,27 @@
 .btn{
-    background-color: rgb(236, 211, 65);
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    background-color: rgb(139, 238, 205);
+    border: 1px solid rgb(32, 114, 88);
+    border-radius: 3px;
+    font-size: 16px;
+    color: rgb(2, 83, 56);
+    font-weight: 600;
     line-height: 30px;
     padding: 0 15px;
+    cursor: pointer;
 }
+
+.btn-delete{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.btn:hover{
+    background-color: rgb(2, 128, 86);
+    border: 1px solid rgb(0, 71, 48);
+    color: rgb(203, 241, 232);
+    cursor: pointer;
+}
+

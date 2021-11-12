@@ -1,0 +1,8 @@
+.input{
+    line-height: 30px;
+    border-radius: 2px;
+    border: 1px solid rgb(6, 136, 95);
+    padding: 0 10px;
+    color: #888;
+    font-style: italic;
+}

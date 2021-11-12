@@ -2,15 +2,20 @@
     margin: 0 auto;
     padding: 50px;
     max-width: 500px;
-    background-color: cadetblue;
+    border: 2px solid rgb(29, 172, 124);
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
 .login .login__title{
     font-style: normal;
     font-size: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    color: rgb(0, 131, 87);
 }
 
 .login .login__btn{
-    margin-left: 20px;
+    margin-left: 50px;
 }

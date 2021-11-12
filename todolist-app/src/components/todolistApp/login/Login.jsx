@@ -9,7 +9,7 @@ function Login() {
     return (
       <div className="login">
         <Title nameTitle={'login__title'} title={'Autorization'}/>
-        <InputText />
+        <InputText nameInput={'login__input'} valueInput={'Enter name...'}/>
         <Button nameBtn={'login__btn'} title={'Log in'}/>
       </div>
     );

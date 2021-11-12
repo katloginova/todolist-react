@@ -3,12 +3,15 @@ import Button from "../../buttons/Button";
 import InputText from "../../inputs/InputText";
 import TaskList from "./TaskList";
 
-function TodoListContent() {
+import './style.css';
+
+function TodoListContent(props) {
+  const {nameTodo} = props;
     return (
-      <div className="todolist">
-          <TaskList nameList={'todolist__list'}/>
-          <InputText />
-          <Button nameBtn={'btn btn-add'} title={'add task'}/>
+      <div className={nameTodo}>
+          <TaskList nameList={nameTodo}/>
+          <InputText nameInput={`${nameTodo}__input`} valueInput={'Enter task...'}/>
+          <Button nameBtn={`${nameTodo}__btn`} title={'add task'}/>
       </div>
     );
   }
