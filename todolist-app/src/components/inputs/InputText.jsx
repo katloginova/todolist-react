@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import constants from "../helpers/constants";
 import './style.css';
 
-function InputText(props) {
-  const {valueInput, handlerChangeInput} = props;
+function InputText ( props ) {
+  const { valueInput, handlerChangeInput } = props;
 
-    return (
-        <input className={'input'} type="text" value={valueInput} onChange={handlerChangeInput}/>
-    );
-  }
-  
+  return (
+    <input className={ constants.classInputs.input } type="text" value={ valueInput } onChange={ handlerChangeInput } />
+  );
+}
+
 export default InputText;

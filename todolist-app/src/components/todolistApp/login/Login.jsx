@@ -5,17 +5,17 @@ import InputText from "../../inputs/InputText";
 
 import './style.css';
 
-function Login(props) {
-  const {valueInput, handlerChangeInput, handlerClick} = props;
+function Login ( props ) {
+  const { valueInput, loginChangeInput, loginClick } = props;
 
-    return (
-      <div className="login">
-        <h2 className={'login-title'}>Autorization</h2>
+  return (
+    <div className={ constants.classNames.login }>
+      <h2 className={ constants.classNames.loginTitle }>Autorization</h2>
 
-        <InputText valueInput={valueInput} handlerChangeInput={handlerChangeInput}/>
-        <Button title={constants.buttons.login} handlerClick={handlerClick}/>
-      </div>
-    );
-  }
-  
+      <InputText valueInput={ valueInput } handlerChangeInput={ loginChangeInput } />
+      <Button title={ constants.buttons.login } handlerClick={ loginClick } />
+    </div>
+  );
+}
+
 export default Login;

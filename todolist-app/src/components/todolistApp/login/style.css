@@ -1,4 +1,4 @@
-.login{
+.login {
     margin: 0 auto;
     padding: 50px;
     max-width: 500px;
@@ -6,16 +6,15 @@
     border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
-.login-title{
+.login-title {
     font-style: normal;
     font-size: 24px;
     margin-bottom: 50px;
     color: rgb(0, 131, 87);
 }
 
-.login .btn{
+.login .btn {
     margin-left: 50px;
 }

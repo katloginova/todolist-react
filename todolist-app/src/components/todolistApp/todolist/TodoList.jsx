@@ -2,21 +2,33 @@ import React from "react";
 import Button from "../../buttons/Button";
 import InputText from "../../inputs/InputText";
 import TaskList from "./TaskList";
-
-import './style.css';
 import constants from "../../helpers/constants";
 
-function TodoList(props) {
-  const {list, clickDelete, valueInput, handlerChangeInput, handlerClick} = props;
+import './style.css';
 
-    return (
-      <div className={'todolist'}>
-          <TaskList list={list} clickDelete={clickDelete}/>
 
-          <InputText valueInput={valueInput} handlerChangeInput={handlerChangeInput}/>
-          <Button title={constants.buttons.add} handlerClick={handlerClick}/>
-      </div>
-    );
-  }
-  
+function TodoList ( props ) {
+  const { list, changeStateClick, deleteTaskClick, valueInput, taskChangeInput, taskClick } = props;
+
+  return (
+    <div className={ constants.classNames.todolist }>
+      <TaskList
+        list={ list }
+        changeStateClick={ changeStateClick }
+        deleteTaskClick={ deleteTaskClick }
+      />
+
+      <InputText
+        valueInput={ valueInput }
+        handlerChangeInput={ taskChangeInput }
+      />
+
+      <Button
+        title={ constants.buttons.add }
+        handlerClick={ taskClick }
+      />
+    </div>
+  );
+}
+
 export default TodoList;
