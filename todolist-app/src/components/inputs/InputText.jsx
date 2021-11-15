@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import './style.css';
 
 function InputText(props) {
-  const {nameInput, valueInput} = props;
+  const {valueInput, handlerChangeInput} = props;
+
     return (
-        <input className={`input ${nameInput}`} type="text" value={valueInput}/>
+        <input className={'input'} type="text" value={valueInput} onChange={handlerChangeInput}/>
     );
   }
   

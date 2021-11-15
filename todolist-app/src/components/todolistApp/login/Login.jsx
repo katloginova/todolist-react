@@ -1,16 +1,19 @@
 import React from "react";
+import constants from "../../helpers/constants"
 import Button from "../../buttons/Button";
 import InputText from "../../inputs/InputText";
-import Title from "../../titles/Title";
 
 import './style.css';
 
-function Login() {
+function Login(props) {
+  const {valueInput, handlerChangeInput, handlerClick} = props;
+
     return (
       <div className="login">
-        <Title nameTitle={'login__title'} title={'Autorization'}/>
-        <InputText nameInput={'login__input'} valueInput={'Enter name...'}/>
-        <Button nameBtn={'login__btn'} title={'Log in'}/>
+        <h2 className={'login-title'}>Autorization</h2>
+
+        <InputText valueInput={valueInput} handlerChangeInput={handlerChangeInput}/>
+        <Button title={constants.buttons.login} handlerClick={handlerClick}/>
       </div>
     );
   }

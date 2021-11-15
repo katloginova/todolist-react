@@ -3,4 +3,7 @@
     background-color: rgb(29, 172, 124);
     color: rgb(236, 252, 164);
     text-shadow: 2px 0 2px black;
+    font-size: 35px;
+    font-weight: 600;
+    font-style: italic;
 }

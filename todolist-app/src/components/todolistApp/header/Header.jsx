@@ -1,11 +1,11 @@
 import React from "react";
-import Title from "../../titles/Title";
 import './style.css'
 
-function Header() {
+function Header({name}) {
     return (
         <header className={'head'}>
-            <Title nameTitle={'head-title'} title={'ToDoList'}/>
+            <h1 className={'head-title'}>ToDoList</h1>
+            {name && <div>{name}</div>}
         </header>
     );
   }

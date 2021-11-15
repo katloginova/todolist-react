@@ -12,10 +12,12 @@
 
 .btn-delete{
     border-radius: 50%;
+    border: 2px solid rgb(0, 71, 48);
     width: 30px;
     height: 30px;
     margin-right: 40px;
     padding: 0;
+    background: none;
 }
 
 .btn:hover{

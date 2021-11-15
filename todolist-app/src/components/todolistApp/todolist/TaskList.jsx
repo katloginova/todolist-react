@@ -1,20 +1,12 @@
 import React from "react";
-import Button from "../../buttons/Button";
+import Task from "./Task";
 
 function TaskList(props) {
-    const {nameList} = props;
+    const {list, clickDelete} = props;
 
     return (
-        <ul className={`${nameList}__list ${nameList}-list`}>
-            <li className={`${nameList}-list__item active`}>
-            <Button nameBtn={'btn-delete'} title={'X'}/>
-                item 
-            
-            </li>
-            <li className={`${nameList}-list__item`}>item</li>
-            <li className={`${nameList}-list__item`}>item</li>
-
-
+        <ul className={'todolist-list'}>
+            {list?.map((item) => <Task task={item} clickDelete={clickDelete}/>)}
         </ul>
     );
   }
