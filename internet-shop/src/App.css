@@ -1,0 +1,6 @@
+@import './fonts/fonts.css';
+
+.App{
+    font-family: 'OpenSans';
+    margin: 0;
+}

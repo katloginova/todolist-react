@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 190px;
+    background-color: aquamarine;
+}
+
+.header .nav-menu {
+    flex-grow: 1;
+    margin-left: 50px;
+    display: flex;
+}
+
+.nav-menu .nav-menu__item {
+    margin-right: 25px;
+}
+
+.nav-menu .nav-menu__item a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #656565;
+}
+
+.nav-menu .nav-menu__item a:hover {
+    color: #0ae75f;
+}

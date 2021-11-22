@@ -1,20 +1,15 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/todolist-app/node_modules
-/todolist-app/.pnp
-
-/internet-shop/node_modules
-/internet-shop/.pnp
+/node_modules
+/.pnp
 .pnp.js
 
 # testing
-/todolist-app/coverage
-/internet-shop/coverage
+/coverage
 
 # production
-/todolist-app/build
-/internet-shop/build
+/build
 
 # misc
 .DS_Store
