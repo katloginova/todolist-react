@@ -1,0 +1,22 @@
+.icon-basket{
+    width: 46px;
+    height: 46px;
+    background-color: #7db122;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #7db122;
+}
+
+.icon-basket:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #7db122;
+    border-radius: 50%;
+}
+
+.fa-basket{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+

@@ -1,0 +1,35 @@
+.catalog{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.card-product{
+    width: 230px;
+    height: 320px;
+    padding: 10px;
+    box-shadow: 0 0 5px 0 #333;
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    height: 80%;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-descr{
+    width: 70%;
+}
+
+.card-descr__title{
+    font-size: 8px;
+}
+
+.card-descr__price{
+    font-size: 13px;
+}

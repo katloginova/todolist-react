@@ -4,3 +4,14 @@
     font-family: 'OpenSans';
     margin: 0;
 }
+
+
+
+.products-count{
+    margin-left: 15px;
+    background-color: #fff;
+    border: 1px solid #7db122;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
