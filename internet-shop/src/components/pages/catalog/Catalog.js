@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import constants from "../../helpers/constants";
 import CardProduct from "./CardProduct";
 import './style.css';
@@ -9,21 +10,24 @@ function Catalog () {
     useEffect( () => {
         fetch( constants.urlProducts )
             .then( res => res.json() )
-            // .then( ( data ) => setListProducts( data ) )
             .then( ( data ) => setListProducts( data ) )
-            .then( () => console.log( listProducts[0] ) )
     }, [])
 
+    let {pathname} = useLocation()
+    console.log( pathname );
 
-    return (
+    return (listProducts.length !== 0) && (
         <div className="catalog">
-            { listProducts && listProducts.map( ( item ) =>
-                <CardProduct
+            { listProducts.map( ( item ) =>
+                <Link className={'catalog-item'} to={ `${ pathname }/${ item.id }` }>
+                    <CardProduct
                     id={ item.id }
                     titleCard={ item.title }
                     priceCard={ item.price }
                     imageCard={ item.image }
-                /> ) }
+                    />
+                </Link>
+            ) }
             
         </div>
     );

@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 190px;
-    background-color: aquamarine;
+    background-color: #d4ff8b;
 }
 
 .header .nav-menu {
@@ -25,5 +25,5 @@
 }
 
 .nav-menu .nav-menu__item a:hover {
-    color: #0ae75f;
+    color: #7db122;
 }

@@ -1,0 +1,39 @@
+.icon-basket{
+    color: #656565;
+}
+
+.card .card__descr .icon-basket{
+    width: 46px;
+    height: 46px;
+    background-color: #7db122;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #7db122;
+}
+
+.card .card__descr .icon-basket:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #7db122;
+}
+
+.fa-basket, .fa-truck, .fa-phone{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.icon-truck, .icon-phone{
+    color: #39a0b9;
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #39a0b9;
+}
+
+.icon-truck:hover, .icon-phone:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #39a0b9;
+}
