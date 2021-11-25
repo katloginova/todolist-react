@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import IconBasket from "../icons/IconBasket";
 import Logo from "../logo/Logo";
 
 import './style.css';
 
-function Header () {
+function Header ( { countProducts } ) {
 
     return (
         <header className={'header'}>
@@ -17,7 +17,7 @@ function Header () {
             </nav>
 
             <IconBasket size={25} />
-            <div className={'products-count'}>3</div>
+            <div className={'products-count'}>{countProducts}</div>
         </header>
     );
 }

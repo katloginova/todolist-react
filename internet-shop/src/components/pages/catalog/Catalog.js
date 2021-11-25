@@ -5,7 +5,7 @@ import CardProduct from "./CardProduct";
 import './style.css';
 
 
-function Catalog () {
+function Catalog ({selectProduct}) {
     const [listProducts, setListProducts] = useState( [] );
     useEffect( () => {
         fetch( constants.urlProducts )
@@ -13,22 +13,17 @@ function Catalog () {
             .then( ( data ) => setListProducts( data ) )
     }, [])
 
-    let {pathname} = useLocation()
-    console.log( pathname );
-
     return (listProducts.length !== 0) && (
         <div className="catalog">
             { listProducts.map( ( item ) =>
-                <Link className={'catalog-item'} to={ `${ pathname }/${ item.id }` }>
-                    <CardProduct
+                <CardProduct
                     id={ item.id }
                     titleCard={ item.title }
                     priceCard={ item.price }
                     imageCard={ item.image }
-                    />
-                </Link>
+                    selectProduct={ selectProduct }
+                />
             ) }
-            
         </div>
     );
 }

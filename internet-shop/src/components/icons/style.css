@@ -1,8 +1,4 @@
 .icon-basket{
-    color: #656565;
-}
-
-.card .card__descr .icon-basket{
     width: 46px;
     height: 46px;
     background-color: #7db122;
@@ -11,11 +7,22 @@
     border: 2px solid #7db122;
 }
 
-.card .card__descr .icon-basket:hover{
+.icon-basket:hover{
     cursor: pointer;
     background-color: #fff;
     color: #7db122;
 }
+
+.header .icon-basket{
+    color: #656565;
+    border: none;
+    background-color: inherit;
+}
+
+.header .icon-basket:hover{
+    cursor: auto;
+}
+
 
 .fa-basket, .fa-truck, .fa-phone{
     display: block;
@@ -36,4 +43,13 @@
     cursor: pointer;
     color: #fff;
     background-color: #39a0b9;
+}
+
+.icon-trash{
+    color: #cbf08c;
+}
+
+.icon-trash:hover{
+    cursor: pointer;
+    color: #7db122;
 }

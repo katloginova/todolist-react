@@ -1,0 +1,51 @@
+.basket{
+    padding: 0 190px;
+}
+
+.basket .basket-item {
+    display: flex;
+    border-bottom: 1px solid rgb(127, 190, 64);
+    padding: 30px;
+}
+
+.basket .basket__img{
+    max-width: 150px;
+    padding: 0 30px;
+}
+
+.basket .basket__img img{
+    width: 100%;
+}
+
+.basket .basket__img .img-title{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.basket .basket__descr{
+    margin: 0 50px;
+    text-align: left;
+    font-size: 16px;
+    max-width: 500px;
+    
+}
+
+.basket .basket__price{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.basket .basket__inp{
+    margin: 0 50px;
+}
+
+.basket .basket__inp input{
+    padding: 5px 10px;
+    width: 50px;
+    border: 2px solid rgb(127, 190, 64);
+    border-radius: 5px;
+    text-align: center;
+}
+

@@ -1,7 +1,14 @@
-function Basket() {
-    return (
+import React from "react";
+import './style.css';
+import BasketItem from "./BasketItem";
+
+
+function Basket (props) {
+    const { listProducts, changeCountInput, deleteItemClick } = props;
+    
+    return (listProducts.length !== 0) && (
         <div className="basket">
-            <h1>Basket</h1>
+            { listProducts.map( ( item ) => <BasketItem product={ item } changeCountInput={ changeCountInput } deleteItemClick={ deleteItemClick }/>)}
         </div>
     );
 }
