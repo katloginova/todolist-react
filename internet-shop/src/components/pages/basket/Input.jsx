@@ -5,7 +5,7 @@ function Input ( props ) {
   const { valueInput, handlerChangeInput } = props;
 
   return (
-    <input  type="text" value={ valueInput } onChange={ handlerChangeInput } />
+    <input type="text" value={ valueInput } onChange={ handlerChangeInput } />
   );
 }
 

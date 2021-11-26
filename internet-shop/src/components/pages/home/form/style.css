@@ -1,0 +1,32 @@
+.form {
+    max-width: 250px;
+    text-align: center;
+}
+
+.form-description .form-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #635f57;
+}
+
+.form-description .form-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    color: #696969;
+}
+
+.form .form__inp {
+    max-width: 185px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.divider {
+    width: 85px;
+    height: 1px;
+    background-color: #bebebe;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}

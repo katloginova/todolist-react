@@ -14,25 +14,25 @@ function App () {
   let [ listOrderedProducts, setListOrderedProducts ] = useState( [] );
   const [ count, setCount ] = useState( listOrderedProducts.length );
 
-  
- /** events */ 
+
+  /** events */
   function addProductToBasket ( e ) {
     let idProduct;
 
     switch ( true ) {
-      case ( e.target.closest( '.card' ) !== null):
+      case ( e.target.closest( '.card' ) !== null ):
         idProduct = getIdProduct( e.target, 'card' );
         break;
-      
+
       case ( e.target.closest( '.product-details' ) !== null ):
         idProduct = getIdProduct( e.target, 'product-details' );
         break;
-      
+
       default:
         break;
     }
 
-    
+
     const orderedProduct = createOrderedProduct( idProduct );
 
     if ( !isProduct( orderedProduct ) ) {
@@ -41,17 +41,17 @@ function App () {
       listOrderedProducts = changeCountProduct( listOrderedProducts, idProduct );
       setListOrderedProducts( listOrderedProducts );
     }
-    
+
     setCount( listOrderedProducts.length );
 
-    console.log( idProduct, orderedProduct, listOrderedProducts);
+    console.log( idProduct, orderedProduct, listOrderedProducts );
   }
 
   function changeCountInput ( e ) {
     setCount( e.target.value );
   }
 
-  function deleteItemClick (e) {
+  function deleteItemClick ( e ) {
     /**delete element */
     const idProduct = getIdProduct( e.target, 'basket-item' );
     listOrderedProducts = deleteProduct( listOrderedProducts, idProduct );
@@ -62,7 +62,7 @@ function App () {
   }
 
 
-/** */
+  /** functions for doing with product */
   function getIdProduct ( el, nameClass ) {
     return el.closest( `.${ nameClass }` ).dataset.id;
   }
@@ -74,6 +74,12 @@ function App () {
     }
   }
 
+  function sumProduct () {
+
+  }
+
+  /** functions for doing with array products */
+
   function changeCountProduct ( list, id ) {
     return list.map( ( item ) => ( +item.id !== +id ) ? item : { ...item, countUnits: item.countUnits + 1 } );
   }
@@ -83,24 +89,40 @@ function App () {
   }
 
 
-
+  /** functions for check conditions */
   function isProduct ( product ) {
-    return listOrderedProducts.some((item) => +item.id === +product.id)
+    return listOrderedProducts.some( ( item ) => +item.id === +product.id )
   }
 
 
-  
+
   return (
     <div className="App">
       <Router>
-        <Header countProducts={ count }/>
+        <Header countProducts={ count } />
 
         <Routes>
-          <Route path='/' element={ <Home /> } />
-          <Route path='/products' element={ <Catalog selectProduct={ addProductToBasket }/> }/>
-          <Route path='/basket' element={ <Basket listProducts={ listOrderedProducts } changeCountInput={ changeCountInput } deleteItemClick={ deleteItemClick }/> } />
-          <Route path='/products/:productId' element={<ProductDetails selectProduct={ addProductToBasket }/>}/>
-        </Routes> 
+          <Route
+            path='/'
+            element={ <Home /> }
+          />
+          <Route
+            path='/products'
+            element={ <Catalog selectProduct={ addProductToBasket } /> }
+          />
+          <Route
+            path='/basket'
+            element={ <Basket
+              listProducts={ listOrderedProducts }
+              sumProduct={ sumProduct }
+              changeCountInput={ changeCountInput }
+              deleteItemClick={ deleteItemClick } /> }
+          />
+          <Route
+            path='/products/:productId'
+            element={ <ProductDetails selectProduct={ addProductToBasket } /> }
+          />
+        </Routes>
 
         <Footer ></Footer>
       </Router>

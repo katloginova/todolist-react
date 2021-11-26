@@ -1,13 +1,14 @@
 import React from "react";
+import constants from "../helpers/constants";
 import './style.css';
 
 function LinkIconDefault ( props ) {
     const { iconElem, text } = props;
 
     return (
-        <div className={'icon-link'}>
+        <div className={ constants.icons.classes.iconLink }>
             { iconElem }
-            <div className={'icon-text'}>{ text }</div>
+            <div className={ constants.icons.classes.iconText }>{ text }</div>
         </div>
     );
 }

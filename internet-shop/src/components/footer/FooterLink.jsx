@@ -1,14 +1,15 @@
 import React from "react";
+import constants from "../helpers/constants";
 import LinkIconPhone from "../linkIcon/LinkIconPhone";
 import LinkIconTruck from "../linkIcon/LinkIconTruck";
 
 function FooterLink () {
 
     return (
-            <div className={'footer-link'}>
-                <LinkIconTruck />
-                <LinkIconPhone />
-            </div>
+        <div className={ constants.footer.classes.footerLink }>
+            <LinkIconTruck />
+            <LinkIconPhone />
+        </div>
     );
 }
 
