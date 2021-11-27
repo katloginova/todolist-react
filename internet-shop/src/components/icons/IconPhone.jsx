@@ -1,7 +1,6 @@
 import React from "react";
-import { FaPhone } from "react-icons/fa";
 import constants from "../helpers/constants";
-
+import { FaPhone } from "react-icons/fa";
 import './style.css';
 
 function IconPhone ( { size } ) {

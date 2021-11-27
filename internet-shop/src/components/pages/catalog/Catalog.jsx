@@ -3,24 +3,24 @@ import constants from "../../helpers/constants";
 import CardProduct from "./CardProduct";
 import './style.css';
 
-
-function Catalog ( { selectProduct } ) {
-    const [ listProducts, setListProducts ] = useState( [] );
+function Catalog ( { selectProductClick } ) {
+    const [ listProducts, setListProducts ] = useState([]);
+    
     useEffect( () => {
         fetch( constants.urlProducts )
             .then( res => res.json() )
-            .then( ( data ) => setListProducts( data ) )
+            .then( ( products ) => setListProducts( products ) )
     }, [] )
 
     return ( listProducts.length !== 0 ) && (
-        <div className="catalog">
+        <div className={constants.catalogPage.classes.pageCatalog}>
             { listProducts.map( ( item ) =>
                 <CardProduct
                     id={ item.id }
                     titleCard={ item.title }
                     priceCard={ item.price }
                     imageCard={ item.image }
-                    selectProduct={ selectProduct }
+                    selectProductClick={ selectProductClick }
                 />
             ) }
         </div>

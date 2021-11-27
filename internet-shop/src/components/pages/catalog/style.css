@@ -1,56 +1,55 @@
-.catalog{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 50px 80px;
-    
+.page-catalog {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 50px 80px;
 }
 
-.card{
-    width: 230px;
-    padding: 15px;
-    box-shadow: 0 0 15px 1px #999;
-    margin-bottom: 30px;
-    border-radius: 5px;
+.card {
+  width: 230px;
+  padding: 15px;
+  box-shadow: 0 0 15px 1px #999;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
 
-.card:hover{
-    transition: all 200ms linear;
-    transform: scale(1.05);
-    cursor: pointer;
+.card:hover {
+  transition: all 200ms linear;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
-.card__img{
-    height: 215px;
-    overflow: hidden;
+.card__img {
+  height: 215px;
+  overflow: hidden;
 }
-.card__img img{
-    display: block;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.card__descr{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
+.card__img img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-.card__text{
-    max-width: 150px;
+.card__descr {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
 }
 
-.card__title{
-    font-size: 11px;
+.card__text {
+  max-width: 150px;
 }
 
-.card__price{
-    font-size: 14px;
-    line-height: 18px;
+.card__title {
+  font-size: 11px;
+}
 
-    color: #7db122;
-    font-weight: 600;
+.card__price {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #7db122;
+  font-weight: 600;
 }

@@ -1,12 +1,11 @@
 import React, { useMemo, useState } from "react";
 import constants from "../../helpers/constants";
 import { Input, } from 'antd';
-import './style.css';
 import IconTrash from "../../icons/IconTrash";
-
+import './style.css';
 
 function BasketItem ( props ) {
-    const { product, sumProduct, changeCountInput, deleteItemClick } = props;
+    const { product, changeCountInput, deleteItemClick } = props;
     const [ productData, setProductData ] = useState( {} );
 
     useMemo( () => {
@@ -14,7 +13,6 @@ function BasketItem ( props ) {
             .then( res => res.json() )
             .then( ( data ) => setProductData( data ) )
     }, [ product.id ] );
-
 
     let {
         id = '',
@@ -24,24 +22,27 @@ function BasketItem ( props ) {
         image = ''
     } = productData;
 
-
     return ( Object.keys( productData ).length !== 0 ) && (
-        <div className="basket-item" data-id={ id }>
-
-            <div className={ 'basket__img' }>
-                <div className={ 'img-title' }>{ title }</div>
+        <div
+            className={ constants.basketPage.classes.basketItem }
+            data-id={ id }
+        >
+            <div className={ constants.basketPage.classes.basketImg }>
+                <div className={ constants.basketPage.classes.imgTitle }>
+                    { title }
+                </div>
                 <img src={ image } alt={ title } />
             </div>
 
-            <div className={ 'basket__descr' }>
+            <div className={ constants.basketPage.classes.basketDescr }>
                 { description }
             </div>
 
-            <div className={ 'basket__price' }>
+            <div className={ constants.basketPage.classes.basketPrice }>
                 { `$${ price }` }
             </div>
 
-            <div className={ 'basket__inp' }>
+            <div className={ constants.basketPage.classes.basketInp }>
                 <Input
                     defaultValue={ product.countUnits }
                     onChange={ changeCountInput }
@@ -49,10 +50,6 @@ function BasketItem ( props ) {
             </div>
 
             <IconTrash size={ 30 } click={ deleteItemClick } />
-
-            <div className={ 'basket__sum-prod' }>
-                { sumProduct }
-            </div>
         </div>
     );
 }

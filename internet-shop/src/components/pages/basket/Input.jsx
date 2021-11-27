@@ -1,5 +1,4 @@
 import React from "react";
-// import './style.css';
 
 function Input ( props ) {
   const { valueInput, handlerChangeInput } = props;

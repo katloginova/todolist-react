@@ -9,10 +9,11 @@ import { useState } from "react";
 
 import 'normalize.css';
 import './App.css';
+import constants from "./components/helpers/constants";
 
 function App () {
   let [ listOrderedProducts, setListOrderedProducts ] = useState( [] );
-  const [ count, setCount ] = useState( listOrderedProducts.length );
+  const [ countProducts, setCountProducts ] = useState( listOrderedProducts.length );
 
 
   /** events */
@@ -20,51 +21,49 @@ function App () {
     let idProduct;
 
     switch ( true ) {
-      case ( e.target.closest( '.card' ) !== null ):
-        idProduct = getIdProduct( e.target, 'card' );
+      case ( e.target.closest( `.${constants.catalogPage.classes.card}` ) !== null ):
+        idProduct = getIdProduct( e.target, constants.catalogPage.classes.card );
         break;
-
-      case ( e.target.closest( '.product-details' ) !== null ):
-        idProduct = getIdProduct( e.target, 'product-details' );
+      case ( e.target.closest( `.${constants.productDetails.classes.productDetails}` ) !== null ):
+        idProduct = getIdProduct(e.target, constants.productDetails.classes.productDetails);
         break;
-
       default:
         break;
     }
 
-
     const orderedProduct = createOrderedProduct( idProduct );
 
-    if ( !isProduct( orderedProduct ) ) {
+    if ( !isProductOrder( orderedProduct ) ) {
       listOrderedProducts.push( orderedProduct );
-    } else {
-      listOrderedProducts = changeCountProduct( listOrderedProducts, idProduct );
+    }
+    else
+    {
+      listOrderedProducts = changeCountUnits( idProduct );
       setListOrderedProducts( listOrderedProducts );
     }
 
-    setCount( listOrderedProducts.length );
-
-    console.log( idProduct, orderedProduct, listOrderedProducts );
+    setCountProducts( listOrderedProducts.length );
   }
 
   function changeCountInput ( e ) {
-    setCount( e.target.value );
+    const idProduct = getIdProduct(e.target, constants.basketPage.classes.basketItem);
+      
+    listOrderedProducts = changeCountUnitsInput( idProduct, e.target.value );
+    setListOrderedProducts(listOrderedProducts);
   }
 
   function deleteItemClick ( e ) {
-    /**delete element */
-    const idProduct = getIdProduct( e.target, 'basket-item' );
+    const idProduct = getIdProduct( e.target, constants.basketPage.classes.basketItem );
     listOrderedProducts = deleteProduct( listOrderedProducts, idProduct );
 
-    setListOrderedProducts( listOrderedProducts );
-
-    console.log( 'delete', listOrderedProducts );
+    setListOrderedProducts(listOrderedProducts);
+    setCountProducts( listOrderedProducts.length );
   }
 
 
   /** functions for doing with product */
-  function getIdProduct ( el, nameClass ) {
-    return el.closest( `.${ nameClass }` ).dataset.id;
+  function getIdProduct ( elem, nameClass ) {
+    return elem.closest( `.${ nameClass }` ).dataset.id;
   }
 
   function createOrderedProduct ( id ) {
@@ -74,32 +73,33 @@ function App () {
     }
   }
 
-  function sumProduct () {
-
+  /** functions for doing with array products */
+  function changeCountUnits ( id ) {
+    return listOrderedProducts.map((item) =>
+      (+item.id !== +id) ?
+        item : { ...item, countUnits: item.countUnits + 1 });
   }
 
-  /** functions for doing with array products */
-
-  function changeCountProduct ( list, id ) {
-    return list.map( ( item ) => ( +item.id !== +id ) ? item : { ...item, countUnits: item.countUnits + 1 } );
+  function changeCountUnitsInput ( id, inpValue ) {
+    return listOrderedProducts.map((item) =>
+      (+item.id !== +id) ?
+        item : { ...item, countUnits: inpValue });
   }
 
   function deleteProduct ( list, id ) {
     return list.filter( ( item ) => +item.id !== +id );
   }
 
-
   /** functions for check conditions */
-  function isProduct ( product ) {
+  function isProductOrder ( product ) {
     return listOrderedProducts.some( ( item ) => +item.id === +product.id )
   }
-
 
 
   return (
     <div className="App">
       <Router>
-        <Header countProducts={ count } />
+        <Header countProducts={ countProducts } />
 
         <Routes>
           <Route
@@ -108,20 +108,20 @@ function App () {
           />
           <Route
             path='/products'
-            element={ <Catalog selectProduct={ addProductToBasket } /> }
+            element={ <Catalog selectProductClick={ addProductToBasket } /> }
+          />
+          <Route
+            path='/products/:productId'
+            element={ <ProductDetails selectProductClick={ addProductToBasket } /> }
           />
           <Route
             path='/basket'
             element={ <Basket
               listProducts={ listOrderedProducts }
-              sumProduct={ sumProduct }
               changeCountInput={ changeCountInput }
               deleteItemClick={ deleteItemClick } /> }
           />
-          <Route
-            path='/products/:productId'
-            element={ <ProductDetails selectProduct={ addProductToBasket } /> }
-          />
+
         </Routes>
 
         <Footer ></Footer>

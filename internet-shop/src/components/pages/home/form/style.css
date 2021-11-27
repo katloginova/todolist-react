@@ -1,32 +1,35 @@
 .form {
-    max-width: 250px;
-    text-align: center;
+  max-width: 250px;
+  text-align: center;
 }
 
 .form-description .form-title {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #635f57;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #635f57;
 }
 
 .form-description .form-subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    color: #696969;
+  font-size: 14px;
+  line-height: 20px;
+  color: #696969;
 }
 
 .form .form__inp {
-    max-width: 185px;
-    background-color: #ffffff;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    line-height: 30px;
+  max-width: 185px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.form .form__inp .input {
+  line-height: 35px;
 }
 
 .divider {
-    width: 85px;
-    height: 1px;
-    background-color: #bebebe;
-    margin: 0 auto;
-    margin-bottom: 15px;
+  width: 85px;
+  height: 1px;
+  background-color: #bebebe;
+  margin: 0 auto;
+  margin-bottom: 15px;
 }

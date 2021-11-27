@@ -1,7 +1,6 @@
 import React from "react";
-import { FaTruck } from "react-icons/fa";
 import constants from "../helpers/constants";
-
+import { FaTruck } from "react-icons/fa";
 import './style.css';
 
 function IconTruck ( { size } ) {
