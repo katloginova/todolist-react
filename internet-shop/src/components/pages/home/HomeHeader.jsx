@@ -4,10 +4,10 @@ import constants from "../../helpers/constants";
 function HomeHeader () {
 
     return (
-        <div className={ constants.homePage.classes.homeHead }>
-            <div className={ constants.homePage.classes.homeHeadTitle }>
-                <p className={ constants.homePage.classes.titleCategory }>ALUMINUM CLUB</p>
-                <p className={ constants.homePage.classes.titleFirm }>Experience Ray-Ban</p>
+        <div className={ constants.homePage.homeHead }>
+            <div className={ constants.homePage.homeHeadTitle }>
+                <p className={ constants.homePage.titleCategory }>ALUMINUM CLUB</p>
+                <p className={ constants.homePage.titleFirm }>Experience Ray-Ban</p>
             </div>
 
         </div>

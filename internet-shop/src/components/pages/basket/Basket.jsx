@@ -8,7 +8,7 @@ function Basket ( props ) {
     const { listProducts, changeCountInput, deleteItemClick } = props;
 
     return ( listProducts.length !== 0 ) && (
-        <div className={ constants.basketPage.classes.pageBasket }>
+        <div className={ constants.basketPage.pageBasket }>
             { listProducts.map( ( item ) =>
                 <BasketItem
                     product={ item }

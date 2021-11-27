@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Basket from "./components/pages/basket/Basket";
 import Catalog from "./components/pages/catalog/Catalog";
 import Home from "./components/pages/home/Home";
 import ProductDetails from "./components/pages/catalog/productDetails/ProductDetails";
-import { useState } from "react";
-
+import constants from "./components/helpers/constants";
 import 'normalize.css';
 import './App.css';
-import constants from "./components/helpers/constants";
+
 
 function App () {
   let [ listOrderedProducts, setListOrderedProducts ] = useState( [] );
@@ -21,11 +21,11 @@ function App () {
     let idProduct;
 
     switch ( true ) {
-      case ( e.target.closest( `.${constants.catalogPage.classes.card}` ) !== null ):
-        idProduct = getIdProduct( e.target, constants.catalogPage.classes.card );
+      case ( e.target.closest( `.${constants.catalogPage.card}` ) !== null ):
+        idProduct = getIdProduct( e.target, constants.catalogPage.card );
         break;
-      case ( e.target.closest( `.${constants.productDetails.classes.productDetails}` ) !== null ):
-        idProduct = getIdProduct(e.target, constants.productDetails.classes.productDetails);
+      case ( e.target.closest( `.${constants.productDetails.productDetails}` ) !== null ):
+        idProduct = getIdProduct(e.target, constants.productDetails.productDetails);
         break;
       default:
         break;
@@ -46,14 +46,14 @@ function App () {
   }
 
   function changeCountInput ( e ) {
-    const idProduct = getIdProduct(e.target, constants.basketPage.classes.basketItem);
+    const idProduct = getIdProduct(e.target, constants.basketPage.basketItem);
       
     listOrderedProducts = changeCountUnitsInput( idProduct, e.target.value );
     setListOrderedProducts(listOrderedProducts);
   }
 
   function deleteItemClick ( e ) {
-    const idProduct = getIdProduct( e.target, constants.basketPage.classes.basketItem );
+    const idProduct = getIdProduct( e.target, constants.basketPage.basketItem );
     listOrderedProducts = deleteProduct( listOrderedProducts, idProduct );
 
     setListOrderedProducts(listOrderedProducts);

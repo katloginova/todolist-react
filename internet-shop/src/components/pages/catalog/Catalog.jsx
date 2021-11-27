@@ -13,7 +13,7 @@ function Catalog ( { selectProductClick } ) {
     }, [] )
 
     return ( listProducts.length !== 0 ) && (
-        <div className={constants.catalogPage.classes.pageCatalog}>
+        <div className={constants.catalogPage.pageCatalog}>
             { listProducts.map( ( item ) =>
                 <CardProduct
                     id={ item.id }

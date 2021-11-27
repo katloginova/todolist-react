@@ -3,15 +3,15 @@ import constants from "../../../helpers/constants";
 
 function FormTitle () {
     return (
-        <div className={ constants.form.classes.formDescription }>
-            <h2 className={ constants.form.classes.formTitle }>
+        <div className={ constants.form.formDescription }>
+            <h2 className={ constants.form.formTitle }>
                 newsletters signup
             </h2>
-            <p className={ constants.form.classes.formSubtitle }>
+            <p className={ constants.form.formSubtitle }>
                 Lorem ipsum dolor sit amen, dolor imun ra adlip
                 ulissys
             </p>
-            <div className={ 'divider' }></div>
+            <div className={ constants.common.divider }></div>
         </div>
     )
 }

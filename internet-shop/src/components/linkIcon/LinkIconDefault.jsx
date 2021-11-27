@@ -6,9 +6,9 @@ function LinkIconDefault ( props ) {
     const { iconElem, text } = props;
 
     return (
-        <div className={ constants.icons.classes.iconLink }>
+        <div className={ constants.icons.iconLink }>
             { iconElem }
-            <div className={ constants.icons.classes.iconText }>{ text }</div>
+            <div className={ constants.icons.iconText }>{ text }</div>
         </div>
     );
 }

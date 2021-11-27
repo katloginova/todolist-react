@@ -1,11 +1,12 @@
 import React from "react";
+import Slider from "react-slick";
+import ButtonCheckout from "../../../buttons/ButtonCheckout";
+import SliderItem from "./SliderItem";
+import photo from '../../../../images/checkout.jpg';
+import constants from "../../../helpers/constants";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.css';
-import Slider from "react-slick";
-import photo from '../../../../images/checkout.jpg';
-import ButtonCheckout from "../../../buttons/ButtonCheckout";
-
 
 function SliderAdvice () {
     const settings = {
@@ -15,22 +16,12 @@ function SliderAdvice () {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+    const sliderItems = [ photo, photo, photo ];
 
     return (
-        <div className={ 'slick-advice' }>
+        <div className={ constants.sliderAdvice.slickAdvice }>
             <Slider { ...settings }>
-                <div >
-                    <img src={ photo } />
-                </div>
-
-                <div>
-                    <img src={ photo } />
-                </div>
-
-                <div>
-                    <img src={ photo } />
-                </div>
-
+                { sliderItems?.map((item) => <SliderItem photoSrc={ item }/>) }
             </Slider>
 
             <ButtonCheckout />

@@ -6,7 +6,7 @@ import LinkIconTruck from "../linkIcon/LinkIconTruck";
 function FooterLink () {
 
     return (
-        <div className={ constants.footer.classes.footerLink }>
+        <div className={ constants.footer.footerLink }>
             <LinkIconTruck />
             <LinkIconPhone />
         </div>

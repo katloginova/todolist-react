@@ -4,11 +4,10 @@ import { FaPhone } from "react-icons/fa";
 import './style.css';
 
 function IconPhone ( { size } ) {
-
     return (
-        <div className={ constants.icons.classes.iconPhone } >
+        <div className={ constants.icons.iconPhone } >
             <FaPhone
-                className={ constants.icons.classes.faPhone }
+                className={ constants.icons.faPhone }
                 size={ size }
             />
         </div>

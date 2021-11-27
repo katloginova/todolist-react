@@ -25,23 +25,23 @@ function ProductDetails ( { selectProductClick } ) {
 
     return ( Object.keys( productData ).length !== 0 ) && (
         <div
-            className={ constants.productDetails.classes.productDetails }
+            className={ constants.productDetails.productDetails }
             data-id={ id }
         >
-            <div className={ constants.productDetails.classes.prductTitle }>{ title }</div>
-            <div className={ constants.productDetails.classes.productImg }>
+            <div className={ constants.productDetails.prductTitle }>{ title }</div>
+            <div className={ constants.productDetails.productImg }>
                 <img
                     src={ image }
-                    alt={ constants.productDetails.classes.prductTitle }
+                    alt={ constants.productDetails.prductTitle }
                 />
             </div>
 
-            <div className={ constants.productDetails.classes.productWrap }>
-                <div className={ constants.productDetails.classes.productDescr }>
+            <div className={ constants.productDetails.productWrap }>
+                <div className={ constants.productDetails.productDescr }>
                     { description }
                 </div>
-                <div className={ constants.productDetails.classes.productPrice }>
-                    <div className={ constants.productDetails.classes.productPriceContent }>
+                <div className={ constants.productDetails.productPrice }>
+                    <div className={ constants.productDetails.productPriceContent }>
                         { `$${ price }` }
                     </div>
                     <IconBasket size={ 35 } click={ selectProductClick } />

@@ -4,13 +4,12 @@ import { FaShoppingBasket } from 'react-icons/fa';
 import './style.css';
 
 function IconBasket ( { size, click } ) {
-
     return (
         <div
-            className={ constants.icons.classes.iconBasket }
+            className={ constants.icons.iconBasket }
             onClick={ click }>
             <FaShoppingBasket
-                className={ constants.icons.classes.faBasket }
+                className={ constants.icons.faBasket }
                 size={ size }
             />
         </div>

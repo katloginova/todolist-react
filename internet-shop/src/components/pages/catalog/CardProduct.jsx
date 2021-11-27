@@ -15,22 +15,22 @@ function CardProduct ( props ) {
 
     return (
         <div
-            className={ constants.catalogPage.classes.card }
+            className={ constants.catalogPage.card }
             data-id={ id }
         >
             <Link
-                className={ constants.catalogPage.classes.cardlink }
+                className={ constants.catalogPage.cardlink }
                 to={ `${ pathname }/${ id }` }
             >
-                <div className={ constants.catalogPage.classes.cardImg }>
+                <div className={ constants.catalogPage.cardImg }>
                     <img alt={ titleCard } src={ imageCard } />
                 </div>
             </Link>
 
-            <div className={ constants.catalogPage.classes.cardDescr }>
-                <div className={ constants.catalogPage.classes.cardText }>
-                    <div className={ constants.catalogPage.classes.cardTitle }>{ titleCard }</div>
-                    <div className={ constants.catalogPage.classes.cardPrice }>{ `$${ priceCard }` }</div>
+            <div className={ constants.catalogPage.cardDescr }>
+                <div className={ constants.catalogPage.cardText }>
+                    <div className={ constants.catalogPage.cardTitle }>{ titleCard }</div>
+                    <div className={ constants.catalogPage.cardPrice }>{ `$${ priceCard }` }</div>
                 </div>
                 <IconBasket size={ 30 } click={ selectProductClick } />
             </div>

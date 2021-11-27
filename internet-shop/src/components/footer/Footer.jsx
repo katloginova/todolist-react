@@ -8,7 +8,7 @@ import './style.css';
 function Footer () {
 
     return (
-        <footer className={ constants.footer.classes.footer }>
+        <footer className={ constants.footer.footer }>
             <FooterLink />
             <FooterCopyRight />
         </footer>

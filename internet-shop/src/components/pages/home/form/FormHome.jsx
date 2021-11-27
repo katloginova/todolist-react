@@ -10,7 +10,7 @@ import './style.css'
 function FormHome() {
   return (
     <Form
-      className={ constants.form.classes.form }
+      className={ constants.form.form }
       name="basic"
       initialValues={{
         remember: true,
@@ -19,7 +19,7 @@ function FormHome() {
       <FormTitle />
 
       <Form.Item
-        className={ constants.form.classes.formInput }
+        className={ constants.form.formInput }
         name="username"
         rules={[
           {
@@ -28,10 +28,10 @@ function FormHome() {
           },
         ]}
       >
-        <Input className={ constants.form.classes.input } />
+        <Input className={ constants.form.input } />
       </Form.Item>
 
-      <Form.Item className={ constants.form.classes.formBtn }>
+      <Form.Item className={ constants.form.formBtn }>
         <ButtonSubmit />
       </Form.Item>
     </Form>

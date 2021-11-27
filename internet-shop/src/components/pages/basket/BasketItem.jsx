@@ -3,6 +3,7 @@ import constants from "../../helpers/constants";
 import { Input, } from 'antd';
 import IconTrash from "../../icons/IconTrash";
 import './style.css';
+import BasketItemImg from "./BasketItemImg";
 
 function BasketItem ( props ) {
     const { product, changeCountInput, deleteItemClick } = props;
@@ -24,25 +25,20 @@ function BasketItem ( props ) {
 
     return ( Object.keys( productData ).length !== 0 ) && (
         <div
-            className={ constants.basketPage.classes.basketItem }
+            className={ constants.basketPage.basketItem }
             data-id={ id }
         >
-            <div className={ constants.basketPage.classes.basketImg }>
-                <div className={ constants.basketPage.classes.imgTitle }>
-                    { title }
-                </div>
-                <img src={ image } alt={ title } />
-            </div>
+            <BasketItemImg title={ title } image={ image } />
 
-            <div className={ constants.basketPage.classes.basketDescr }>
+            <div className={ constants.basketPage.basketDescr }>
                 { description }
             </div>
 
-            <div className={ constants.basketPage.classes.basketPrice }>
+            <div className={ constants.basketPage.basketPrice }>
                 { `$${ price }` }
             </div>
 
-            <div className={ constants.basketPage.classes.basketInp }>
+            <div className={ constants.basketPage.basketInp }>
                 <Input
                     defaultValue={ product.countUnits }
                     onChange={ changeCountInput }
