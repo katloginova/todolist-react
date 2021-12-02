@@ -1,0 +1,17 @@
+.footer .footer-link {
+    display: flex;
+    background-color: #41b0cc;
+    padding: 20px 80px;
+    font-size: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.footer .footer-copyright {
+    background-color: #0b4b5a;
+    padding: 25px 80px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #8adcf0;
+}

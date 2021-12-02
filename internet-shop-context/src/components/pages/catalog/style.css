@@ -1,0 +1,6 @@
+.page-catalog {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 50px 80px;
+}

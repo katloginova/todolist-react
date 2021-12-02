@@ -6,15 +6,21 @@
 
 /internet-shop/node_modules
 /internet-shop/.pnp
+
+/internet-shop-context/node_modules
+/internet-shop-context/.pnp
+
 .pnp.js
 
 # testing
 /todolist-app/coverage
 /internet-shop/coverage
+/internet-shop-context/coverage
 
 # production
 /todolist-app/build
 /internet-shop/build
+/internet-shop-context/build
 
 # misc
 .DS_Store
