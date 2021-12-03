@@ -1,16 +1,19 @@
-import React from "react";
+import { useContext } from "react";
 import './style.css';
 import BasketItem from "./basketItem/BasketItem";
 import constants from "../../helpers/constants";
+import Context from "../../../context";
 
 
 function Basket ( props ) {
-    const { listProducts, changeCountInput, deleteItemClick } = props;
+    const { changeCountInput, deleteItemClick } = props;
+    const { listOrderedProducts } = useContext( Context );
 
-    return ( listProducts.length > 0 ) && (
+    return ( listOrderedProducts.length > 0 ) && (
         <div className={ constants.basketPage.pageBasket }>
-            { listProducts.map( ( item ) =>
+            { listOrderedProducts.map( ( item ) =>
                 <BasketItem
+                    key={ item.id }
                     product={ item }
                     changeCountInput={ changeCountInput }
                     deleteItemClick={ deleteItemClick }

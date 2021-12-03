@@ -7,27 +7,25 @@ import ButtonSubmit from '../../../buttons/ButtonSubmit'
 
 import './style.css'
 
-function FormHome() {
+function FormHome () {
   return (
     <Form
       className={ constants.form.form }
       name="basic"
-      initialValues={{
+      initialValues={ {
         remember: true,
-      }}
-    >
+      } }>
       <FormTitle />
 
       <Form.Item
         className={ constants.form.formInput }
         name="username"
-        rules={[
+        rules={ [
           {
             required: true,
             message: 'Please input your username!',
           },
-        ]}
-      >
+        ] }>
         <Input className={ constants.form.input } />
       </Form.Item>
 

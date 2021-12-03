@@ -2,12 +2,6 @@
   padding-bottom: 100px;
 }
 
-.home-head {
-  /* padding: 190px 235px; */
-  /* background: url('../../../images/bg_main.png') center/cover no-repeat; */
-  background-color: red;
-}
-
 .home-head .home-head__slide {
   position: relative;
   width: 100%;

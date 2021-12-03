@@ -3,7 +3,7 @@ import constants from "../../helpers/constants";
 import CardProduct from "./cardProduct/CardProduct";
 import './style.css';
 
-function Catalog ( { selectProductClick } ) {
+function Catalog () {
     const [ listProducts, setListProducts ] = useState( [] );
 
     useEffect( () => {
@@ -18,11 +18,9 @@ function Catalog ( { selectProductClick } ) {
                 <CardProduct
                     key={ item.id }
                     id={ item.id }
-                    titleCard={ item.title }
-                    priceCard={ item.price }
-                    imageCard={ item.image }
-                    selectProductClick={ selectProductClick }
-                />
+                    title={ item.title }
+                    price={ item.price }
+                    image={ item.image } />
             ) }
         </div>
     );

@@ -1,6 +1,5 @@
 import React from "react";
 import constants from "../../../helpers/constants";
-// import './style.css';
 
 function BasketImg ( props ) {
     const { title, image } = props;

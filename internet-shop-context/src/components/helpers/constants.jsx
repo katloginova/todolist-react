@@ -25,6 +25,11 @@ const constants = {
         titleCategory: 'title-category',
         titleFirm: 'title-firm',
         homeAdvice: 'home-advice',
+
+        socialsSection: 'socials-section',
+        socialsItem: 'socials-item',
+        socialTitle: 'social-title',
+
     },
     catalogPage: {
         pageCatalog: 'page-catalog',
@@ -45,6 +50,7 @@ const constants = {
         basketDescr: 'basket__descr',
         basketPrice: 'basket__price',
         basketInp: 'basket__inp',
+        basketPriceUnits: 'basket__price-units'
     },
     productDetails: {
         productDetails: 'product-details',
