@@ -1,37 +1,65 @@
 .icon-basket {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .header .icon-basket {
-    color: #656565;
+  color: #656565;
 }
 
-.fa-basket, .fa-truck, .fa-phone {
-    display: block;
-    margin: 0 auto;
-    height: 100%;
+.fa-basket,
+.fa-truck,
+.fa-phone,
+.fa-twitter,
+.fa-google,
+.fa-linkedin,
+.fa-facebook,
+.fa-rss {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
 }
 
-.icon-truck, .icon-phone {
-    color: #39a0b9;
-    width: 65px;
-    height: 65px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 2px solid #39a0b9;
+.icon-truck,
+.icon-phone,
+.icon-twitter,
+.icon-google,
+.icon-linkedin,
+.icon-facebook,
+.icon-rss {
+  color: #39a0b9;
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #39a0b9;
 }
 
-.icon-truck:hover, .icon-phone:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #39a0b9;
+.icon-twitter,
+.icon-google,
+.icon-linkedin,
+.icon-facebook,
+.icon-rss {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-truck:hover,
+.icon-phone:hover,
+.icon-twitter:hover,
+.icon-google:hover,
+.icon-linkedin:hover,
+.icon-facebook:hover,
+.icon-rss:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #39a0b9;
 }
 
 .icon-trash {
-    color: #cbf08c;
+  color: #cbf08c;
 }
 
 .icon-trash:hover {
-    cursor: pointer;
-    color: #7db122;
+  cursor: pointer;
+  color: #7db122;
 }

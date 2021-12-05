@@ -25,11 +25,6 @@ const constants = {
         titleCategory: 'title-category',
         titleFirm: 'title-firm',
         homeAdvice: 'home-advice',
-
-        socialsSection: 'socials-section',
-        socialsItem: 'socials-item',
-        socialTitle: 'social-title',
-
     },
     catalogPage: {
         pageCatalog: 'page-catalog',
@@ -65,7 +60,23 @@ const constants = {
     footer: {
         footer: 'footer',
         footerLink: 'footer-link',
-        footerCopyRight: 'footer-copyright'
+        footerCopyRight: 'footer-copyright',
+
+        socialSection: 'social-section',
+        socialItem: 'social-item',
+        socialTitle: 'social-title',
+        socialText: 'social-text',
+
+        facebook: 'facebook',
+        facebookIcon: 'facebook-icon',
+        twitter: 'twitter',
+        twitterItem: 'twitter-item',
+        info: 'info',
+        infoItem: 'info-item',
+        contact: 'contact',
+        contactItem: 'contact-item',
+        contactLinks: 'contact-links',
+        contactLinksItem: 'contact-links__item',
     },
     buttons: {
         btn: 'btn',
@@ -83,7 +94,17 @@ const constants = {
         iconBasket: 'icon-basket',
         faBasket: 'fa-basket',
         iconTrash: 'icon-trash',
-        faTrash: 'fa-trash'
+        faTrash: 'fa-trash',
+        iconTwitter: 'icon-twitter',
+        faTwitter: 'fa-twitter',
+        iconGoogle: 'icon-google',
+        faGoogle: 'fa-google',
+        iconLinkedin: 'icon-linkedin',
+        faLinkedin: 'fa-linkedin',
+        iconFacebook: 'icon-facebook',
+        faFacebook: 'fa-facebook',
+        iconRss: 'icon-rss',
+        faRss: 'fa-rss'
     },
     sliderAdvice: {
         slickAdvice: 'slick-advice'
