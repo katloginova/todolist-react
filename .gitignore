@@ -10,17 +10,22 @@
 /internet-shop-context/node_modules
 /internet-shop-context/.pnp
 
+/internet-shop-redux/node_modules
+/internet-shop-redux/.pnp
+
 .pnp.js
 
 # testing
 /todolist-app/coverage
 /internet-shop/coverage
 /internet-shop-context/coverage
+/internet-shop-redux/coverage
 
 # production
 /todolist-app/build
 /internet-shop/build
 /internet-shop-context/build
+/internet-shop-redux/build
 
 # misc
 .DS_Store
