@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import constants from "../../../helpers/constants";
 import ImageDefault from "../../../imageDefault/ImageDefault";
 import ProductDescription from "./ProductDescription";
-import getData from "../../../helpers/getProductData";
+import getProductData from "../../../helpers/getProductData";
 import { useDispatch } from "react-redux";
 import { addProduct, setCountProducts, setCountTotal } from "../../../../modules/listOrderedProducts/reducer";
 import './style.css';
@@ -13,14 +13,13 @@ function ProductDetails () {
     const [ productData, setProductData ] = useState( {} );
     const dispatch = useDispatch();
 
-    useEffect( () => { getData( productId, setProductData ) }, [ productId ] );
+    useEffect( () => { getProductData( productId, setProductData ) }, [ productId ] );
     let { id = '', title = '', description = '', price = '', image = '' } = productData;
 
     function productClick () {
         dispatch( addProduct( id ) );
         dispatch( setCountProducts() );
         dispatch( setCountTotal() );
-
     }
 
 

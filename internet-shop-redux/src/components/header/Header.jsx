@@ -7,7 +7,7 @@ import Navigate from "./navigate/Navigate";
 import './style.css';
 
 function Header () {
-    const { countProducts, countTotal } = useSelector( ( state ) => state );
+    const { countProducts, countTotal } = useSelector( ( state ) => state.orderedProducts );
 
     return (
         <header className={ constants.header.header }>

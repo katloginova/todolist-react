@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeCountProducts, deleteProduct, setCountProducts, setCountTotal } from "../../../../modules/listOrderedProducts/reducer";
 import constants from "../../../helpers/constants";
-import getData from "../../../helpers/getProductData";
+import getProductData from "../../../helpers/getProductData";
 import IconTrash from "../../../icons/IconTrash";
 import BasketImg from "./BasketImg";
 import BasketInput from "./BasketInput";
@@ -14,7 +14,7 @@ function BasketItem ( props ) {
     const [ productData, setProductData ] = useState( {} );
     const dispatch = useDispatch();
 
-    useEffect( () => { getData( product.id, setProductData ) }, [ product.id ] );
+    useEffect( () => { getProductData( product.id, setProductData ) }, [ product.id ] );
     let { id = '', title = '', description = '', price = '', image = '' } = productData;
 
     function changeCountInput ( e ) {

@@ -10,7 +10,7 @@ const defaultState = {
     countTotal: 0,
 }
 
-const reducerProducts = ( state = defaultState, action ) => {
+const reducerOrderedProducts = ( state = defaultState, action ) => {
     switch ( action.type ) {
         case ADD_PRODUCT:
             return { ...state, listProducts: addProductToOrder( action.payload, state.listProducts ) };
@@ -33,4 +33,4 @@ export const setCountTotal = () => ( { type: SET_COUNT_TOTAL } );
 export const changeCountProducts = ( payload ) => ( { type: CHANGE_COUNT, payload } );
 export const deleteProduct = ( payload ) => ( { type: DELETE_PRODUCT, payload } )
 
-export default reducerProducts;
+export default reducerOrderedProducts;

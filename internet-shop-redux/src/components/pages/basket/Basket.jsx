@@ -1,15 +1,12 @@
-import { useContext } from "react";
 import './style.css';
 import BasketItem from "./basketItem/BasketItem";
 import constants from "../../helpers/constants";
 import { useSelector } from "react-redux";
-// import Context from "../../../context";
 
 
 function Basket ( props ) {
     const { changeCountInput, deleteItemClick } = props;
-    // const { listOrderedProducts } = useContext( Context );
-    const listProducts = useSelector( ( state ) => state.listProducts )
+    const listProducts = useSelector( ( state ) => state.orderedProducts.listProducts )
 
     return ( listProducts.length > 0 ) && (
         <div className={ constants.basketPage.pageBasket }>

@@ -1,9 +1,9 @@
 import constants from "./constants";
 
-function getData ( id, setData ) {
+function getProductData ( id, setData ) {
     return fetch( `${ constants.urlProducts }${ id }` )
         .then( res => res.json() )
         .then( ( data ) => setData( data ) )
 }
 
-export default getData;
+export default getProductData;

@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import fetchProducts from "../../../api/products";
 import constants from "../../helpers/constants";
 import CardProduct from "./cardProduct/CardProduct";
 import './style.css';
 
 function Catalog () {
-    const [ listProducts, setListProducts ] = useState( [] );
+    const dispatch = useDispatch();
+    let { products } = useSelector( ( state ) => state.fetchedProducts );
 
     useEffect( () => {
-        fetch( constants.urlProducts )
-            .then( res => res.json() )
-            .then( ( products ) => setListProducts( products ) )
-    }, [] )
+        dispatch( fetchProducts() );
+    }, [] );
 
-    return ( listProducts.length > 0 ) && (
+    return ( products.length > 0 ) && (
         <div className={ constants.catalogPage.pageCatalog }>
-            { listProducts.map( ( item ) =>
+            { products.map( ( item ) =>
                 <CardProduct
                     key={ item.id }
                     id={ item.id }

@@ -1,9 +1,13 @@
 import API from "../components/helpers/constantsApi";
+import { getProducts } from "../modules/listFetchedProducts/reducer";
 
 function fetchProducts () {
-    fetch( API.products )
-        .then( res => res.json() )
-        .then( ( products ) => setListProducts( products ) )
+    return function ( dispatch ) {
+        fetch( API.products )
+            .then( res => res.json() )
+            .then( ( products ) => dispatch( getProducts( products ) ) );
+    }
+
 }
 
 export default fetchProducts;
