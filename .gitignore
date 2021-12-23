@@ -13,6 +13,9 @@
 /internet-shop-redux/node_modules
 /internet-shop-redux/.pnp
 
+/internet-shop-proptypes/node_modules
+/internet-shop-proptypes/.pnp
+
 .pnp.js
 
 # testing
@@ -20,12 +23,14 @@
 /internet-shop/coverage
 /internet-shop-context/coverage
 /internet-shop-redux/coverage
+/internet-shop-proptypes/coverage
 
 # production
 /todolist-app/build
 /internet-shop/build
 /internet-shop-context/build
 /internet-shop-redux/build
+/internet-shop-proptypes/build
 
 # misc
 .DS_Store

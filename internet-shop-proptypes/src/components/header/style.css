@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 190px;
+    background-color: #d4ff8b;
+}
+
+.header .nav-menu {
+    flex-grow: 1;
+    margin-left: 50px;
+    display: flex;
+}
+
+.nav-menu .nav-menu__item {
+    margin-right: 25px;
+}
+
+.nav-menu .nav-menu__item a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #656565;
+}
+
+.nav-menu .nav-menu__item a:hover {
+    color: #7db122;
+}
+
+.products-count {
+    margin: 0 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-weight: 600;
+    line-height: 30px;
+}

@@ -1,0 +1,49 @@
+.btn {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0 24px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn_submit {
+    background-color: #7eb123;
+    border: 2px solid #7eb123;
+}
+
+.btn_submit:hover {
+    background-color: #fff;
+    color: #7eb123;
+}
+
+.btn_checkout {
+    background-color: #4cb1ca;
+    border: 2px solid #4cb1ca;
+
+}
+
+.btn_checkout:hover {
+    background-color: #fff;
+    color: #4cb1ca;
+}
+
+.btn_basket {
+    background-color: #7db122;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #7db122;
+    width: 50px;
+    height: 50px;
+}
+
+.btn_basket:hover {
+    background-color: #fff;
+    color: #7db122;
+}
