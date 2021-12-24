@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-
 function NavigateLink ( props ) {
     let { nameClass, path, title } = props;
 

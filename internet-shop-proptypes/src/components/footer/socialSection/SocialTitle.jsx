@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function SocialTitle ( { title } ) {
     return (
@@ -6,6 +7,10 @@ function SocialTitle ( { title } ) {
             { title }
         </div>
     );
+}
+
+SocialTitle.propTypes = {
+    title: PropTypes.string,
 }
 
 export default SocialTitle;

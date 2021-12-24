@@ -1,8 +1,11 @@
 import React from "react";
-import './style.css';
+import PropTypes from 'prop-types';
 import IconBasket from "../icons/IconBasket";
+import './style.css';
 
-function ButtonBasket ( { size, click } ) {
+function ButtonBasket ( props ) {
+    const { size, click } = props;
+
     return (
         <button
             className="btn_basket"
@@ -11,6 +14,11 @@ function ButtonBasket ( { size, click } ) {
             <IconBasket size={ size } />
         </button>
     );
+}
+
+ButtonBasket.propTypes = {
+    size: PropTypes.number,
+    click: PropTypes.func,
 }
 
 export default ButtonBasket;

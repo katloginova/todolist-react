@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import SocialText from "../SocialText";
 
 function InfoItem ( { text } ) {
@@ -7,6 +8,10 @@ function InfoItem ( { text } ) {
             <SocialText text={ text } />
         </div>
     );
+}
+
+InfoItem.propTypes = {
+    text: PropTypes.string,
 }
 
 export default InfoItem;

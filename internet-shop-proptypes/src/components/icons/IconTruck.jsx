@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { FaTruck } from "react-icons/fa";
 import './style.css';
 
@@ -11,6 +12,10 @@ function IconTruck ( { size } ) {
             />
         </div>
     );
+}
+
+IconTruck.propTypes = {
+    size: PropTypes.number,
 }
 
 export default IconTruck;

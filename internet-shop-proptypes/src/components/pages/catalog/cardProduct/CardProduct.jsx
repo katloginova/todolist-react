@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
+import PropTypes from 'prop-types';
 import Context from "../../../../context";
 import addProductToOrder from "../../../../helpers/addProductToOrder";
 import getCountTotal from "../../../../helpers/getCountTotal";
@@ -9,8 +10,8 @@ import './style.css';
 
 
 function CardProduct ( props ) {
-    let { setCountProducts, setCountTotal, listOrderedProducts, setListOrderedProducts } = useContext( Context );
     const { id, title, price, image } = props;
+    let { setCountProducts, setCountTotal, listOrderedProducts, setListOrderedProducts } = useContext( Context );
     let { pathname } = useLocation();
 
     function basketClick () {
@@ -37,6 +38,13 @@ function CardProduct ( props ) {
                 click={ basketClick } />
         </div>
     );
+}
+
+CardProduct.propTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    image: PropTypes.string,
 }
 
 export default CardProduct;

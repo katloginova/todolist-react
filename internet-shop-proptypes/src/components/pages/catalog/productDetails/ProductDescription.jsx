@@ -1,7 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import ButtonBasket from "../../../buttons/ButtonBasket";
 
-function ProductDescription ( { description, price, click } ) {
+function ProductDescription ( props ) {
+    const { description, price, click } = props;
+
     return (
         <div className="product-details__wrap">
             <div className="product-details__descr">
@@ -15,6 +18,12 @@ function ProductDescription ( { description, price, click } ) {
             </div>
         </div>
     );
+}
+
+ProductDescription.propTypes = {
+    description: PropTypes.string,
+    price: PropTypes.number,
+    click: PropTypes.func,
 }
 
 export default ProductDescription;

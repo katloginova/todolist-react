@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { FaTrashAlt } from "react-icons/fa";
 import './style.css';
 
-function IconTrash ( { size, click } ) {
+function IconTrash ( props ) {
+    const { size, click } = props;
     return (
         <div className="icon-trash"
             onClick={ click }
@@ -13,6 +15,11 @@ function IconTrash ( { size, click } ) {
             />
         </div>
     );
+}
+
+IconTrash.propTypes = {
+    size: PropTypes.number,
+    click: PropTypes.func,
 }
 
 export default IconTrash;

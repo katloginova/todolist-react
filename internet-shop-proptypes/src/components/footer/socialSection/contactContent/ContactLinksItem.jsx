@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function ContactLinksItem ( { icon } ) {
 
@@ -7,6 +8,10 @@ function ContactLinksItem ( { icon } ) {
             { icon }
         </div>
     );
+}
+
+ContactLinksItem.propTypes = {
+    icon: PropTypes.elementType,
 }
 
 export default ContactLinksItem;

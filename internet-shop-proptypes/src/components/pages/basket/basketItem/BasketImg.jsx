@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function BasketImg ( props ) {
     const { title, image } = props;
@@ -11,6 +12,11 @@ function BasketImg ( props ) {
             <img src={ image } alt={ title } />
         </div>
     );
+}
+
+BasketImg.propTypes = {
+    title: PropTypes.string,
+    image: PropTypes.string,
 }
 
 export default BasketImg;

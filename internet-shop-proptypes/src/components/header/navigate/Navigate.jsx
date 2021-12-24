@@ -5,7 +5,7 @@ function Navigate () {
     const navLinks = [
         { path: '/', title: 'Home' },
         { path: '/products', title: 'Catalog' },
-        { path: '/basket', title: [ 1, 2 ] },
+        { path: '/basket', title: 'Basket' },
     ]
 
     return (

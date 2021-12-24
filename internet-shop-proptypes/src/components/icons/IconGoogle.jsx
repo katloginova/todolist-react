@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { FaGoogle } from "react-icons/fa";
 import './style.css';
 
@@ -10,6 +11,10 @@ function IconGoogle ( { size } ) {
                 size={ size } />
         </div>
     );
+}
+
+IconGoogle.propTypes = {
+    size: PropTypes.number,
 }
 
 export default IconGoogle;

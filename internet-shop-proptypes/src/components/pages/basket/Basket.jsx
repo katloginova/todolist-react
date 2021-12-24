@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import './style.css';
+import PropTypes from 'prop-types';
 import BasketItem from "./basketItem/BasketItem";
 import Context from "../../../context";
-
+import './style.css';
 
 function Basket ( props ) {
     const { changeCountInput, deleteItemClick } = props;
@@ -20,6 +20,11 @@ function Basket ( props ) {
             ) }
         </div>
     );
+}
+
+Basket.propTypes = {
+    changeCountInput: PropTypes.func,
+    deleteItemClick: PropTypes.func,
 }
 
 export default Basket;

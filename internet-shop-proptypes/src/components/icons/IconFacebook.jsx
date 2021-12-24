@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { FaFacebook } from "react-icons/fa";
 import './style.css';
 
@@ -11,5 +12,10 @@ function IconFacebook ( { size } ) {
         </div>
     );
 }
+
+IconFacebook.propTypes = {
+    size: PropTypes.number,
+}
+
 
 export default IconFacebook;

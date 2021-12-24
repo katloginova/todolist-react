@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import SocialText from "../SocialText";
 import IconTwitter from "../../../icons/IconTwitter";
 
@@ -9,6 +10,10 @@ function TwItem ( { text } ) {
             <SocialText text={ text } />
         </div>
     );
+}
+
+TwItem.propTypes = {
+    text: PropTypes.string,
 }
 
 export default TwItem;

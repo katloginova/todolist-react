@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-function SliderHeaderItem ( { imgSrc, category, firm } ) {
+function SliderHeaderItem ( props ) {
+    const { imgSrc, category, firm } = props;
 
     return (
         <div className="home-head__slide">
@@ -11,6 +13,12 @@ function SliderHeaderItem ( { imgSrc, category, firm } ) {
             </div>
         </div>
     );
+}
+
+SliderHeaderItem.propTypes = {
+    imgSrc: PropTypes.string,
+    category: PropTypes.string,
+    firm: PropTypes.string,
 }
 
 export default SliderHeaderItem;

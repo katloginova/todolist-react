@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import Context from "../../../../context";
 import changeCount from "../../../../helpers/changeCount";
 import deleteItem from "../../../../helpers/deleteItem";
@@ -11,8 +12,8 @@ import BasketItemDescription from "./BasketItemDescription";
 import BasketPriceUnits from "./BasketPriceUnits";
 
 function BasketItem ( props ) {
-    let { setCountProducts, setCountTotal, listOrderedProducts, setListOrderedProducts } = useContext( Context );
     const { product } = props;
+    let { setCountProducts, setCountTotal, listOrderedProducts, setListOrderedProducts } = useContext( Context );
     const [ productData, setProductData ] = useState( {} );
 
     useEffect( () => { getData( product.id, setProductData ) }, [ product.id ] );
@@ -52,6 +53,13 @@ function BasketItem ( props ) {
             <BasketPriceUnits countUnits={ product.countUnits } price={ price } />
         </div>
     );
+}
+
+BasketItem.propTypes = {
+    product: PropTypes.shape( {
+        id: PropTypes.number,
+        countUnits: PropTypes.number,
+    } )
 }
 
 export default BasketItem;

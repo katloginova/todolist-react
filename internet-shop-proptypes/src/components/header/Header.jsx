@@ -13,7 +13,7 @@ function Header () {
         <header className="header">
             <Logo />
             <Navigate />
-            <InputSearch nameClass="header-search" />
+            <InputSearch />
             <div className="products-count">
                 { `${ countProducts } (${ countTotal })` }
             </div>
@@ -21,6 +21,5 @@ function Header () {
         </header>
     );
 }
-
 
 export default Header;
