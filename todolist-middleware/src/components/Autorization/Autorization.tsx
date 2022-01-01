@@ -2,10 +2,12 @@ import React, { FC } from 'react';
 import { Input } from 'antd';
 import './style.css';
 import DefaultButton from '../DefaultButton/DefaultButton';
+import { signinUser } from '../../modules/users/reducer';
 
 const Autorization: FC = () => {
-    function signin() {
+    function signin(e: any) {
         console.log("login")
+        signinUser(e.target.value);
     }
 
   return (
