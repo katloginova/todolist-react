@@ -1,5 +1,7 @@
-const SIGNIN_USER: string = 'SIGNIN_USER';
+const GET_USER: string = 'GET_USER';
+const USER_NAME: string = 'USER_NAME';
 
 export {
-    SIGNIN_USER,
+    GET_USER,
+    USER_NAME,
 }

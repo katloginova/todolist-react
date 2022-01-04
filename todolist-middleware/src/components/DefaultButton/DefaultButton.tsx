@@ -8,7 +8,7 @@ const DefaultButton: FC<typesProps> = ({classBtn, title, click}) => {
     <Button
       className={`btn ${classBtn}`}
       type="primary"
-      onClick={(e: any) => click}>
+      onClick={click}>
       
       {title}
     </Button>
