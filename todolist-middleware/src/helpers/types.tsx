@@ -1,5 +1,5 @@
 export interface typesTask{
-    task: string,
+    task?: string,
     isDone?: boolean
 }
 
@@ -14,8 +14,8 @@ export interface typesUsers{
 
 export interface typesState{
     users: typesUser[],
-    user: typesUser | null,
-    userName: string
+    user?: typesUser | null | undefined,
+    userName: string,
 }
 
 export interface typesAction{

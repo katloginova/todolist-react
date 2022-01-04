@@ -1,34 +1,30 @@
 import React, { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Input } from 'antd';
-import './style.css';
 import DefaultButton from '../DefaultButton/DefaultButton';
 import { getUserData, getUserName } from '../../modules/users/reducer';
 import { typesState } from '../../helpers/types';
 import isEmpty from '../../helpers/isEmpty';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { signinUser } from '../../modules/users/reducer';
+import { Link } from 'react-router-dom';
+import './style.css';
+
 
 const Autorization: FC = () => {
     const dispatch = useDispatch();
     let userName = useSelector((state: typesState) => state.userName);
-    const [path, setPath] = useState<string>('');
-    // let { pathname } = useLocation();
-    console.log(useLocation());
+    const [nameUser, setNameUser] = useState<string>(userName);
+    let path = '/user-tasks';
 
     function enterUser(){
         if(!isEmpty(userName)){
             dispatch(getUserData(userName));
-            setPath('/tasks');
-            // console.log(pathname)
         }
-        else{
-            setPath('');
-        }
+        setNameUser('');
     }
 
     function changeInput(e: any){
         userName = e.target.value;
+        setNameUser(userName);
         dispatch(getUserName(userName.trim()));
     }
 
@@ -36,15 +32,17 @@ const Autorization: FC = () => {
       <div className="autorization">
           <div className='autorization-title'>Авторизация</div>
           <Input.Group className='autorization-form' compact>
-              <Input className='autorization-input' placeholder="Name" onChange={changeInput}/>
+              <Input
+                  className='autorization-input'
+                  placeholder="Name"
+                  value={nameUser}
+                  onChange={changeInput} />
               <div className='autorization-btns'>
-              {/* <Button className='autorization-btn' type="primary">войти</Button>
-              <Button className='autorization-btn' type="primary">зарегистрироваться</Button>
-              <Button className='autorization-btn' type="primary">admin</Button>
-              <Button className='autorization-btn' type="primary">гость</Button> */}
-                  {/* <DefaultButton classBtn='autorization-btn' title='войти' click={enterUser} /> */}
-                  <Link to={path}>
-                    <DefaultButton classBtn='autorization-btn' title='войти' click={enterUser} />
+                  <Link to={!isEmpty(userName)? path : ''}>
+                      <DefaultButton
+                          classBtn='autorization-btn'
+                          title='войти'
+                          click={enterUser} />
                   </Link>
               </div>
           </Input.Group>

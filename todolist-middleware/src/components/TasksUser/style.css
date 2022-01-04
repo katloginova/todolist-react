@@ -1,0 +1,26 @@
+.tasks-user {
+    padding: 50px 100px;
+    background-color: burlywood;
+}
+
+.tasks-user__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.tasks-list {
+    background-color: chartreuse;
+}
+
+.tasks-list .task-item {
+    border-bottom: 1px solid #888;
+}
+
+.task-input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    min-width: 150px;
+}

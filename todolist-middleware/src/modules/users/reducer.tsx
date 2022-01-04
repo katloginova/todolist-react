@@ -7,7 +7,7 @@ import { GET_USER, USER_NAME } from "./type";
 const defaultState: typesState = {
     users: [],
     user: null,
-    userName: ''
+    userName: '',
 }
 
 const reducerUsers: any = (state = defaultState, action: typesAction) => {
@@ -15,13 +15,13 @@ const reducerUsers: any = (state = defaultState, action: typesAction) => {
         case GET_USER:
             return {...state, user: getUser(state.users, action.payload)};
         case USER_NAME:
-            return {...state, userName: action.payload}
+            return { ...state, userName: action.payload };
         default:
             return state;
     }
 }
 
 export const getUserName = (payload: string) => ({type: USER_NAME, payload});
-export const getUserData = (payload: string) => ({type: GET_USER, payload});
+export const getUserData = (payload: string) => ({ type: GET_USER, payload });
 
 export default reducerUsers;

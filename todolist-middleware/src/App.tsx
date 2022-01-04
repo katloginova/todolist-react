@@ -13,7 +13,7 @@ const App: FC = () => {
 
         <Routes>
           <Route path='/' element={ <Autorization/> } />
-          <Route path='/tasks' element={<TasksUser />}/>
+          <Route path='/user-tasks' element={<TasksUser />}/>
         </Routes>
       </Router>
     </div>
