@@ -1,0 +1,26 @@
+.autorization {
+    padding: 50px 100px;
+}
+
+.autorization-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.autorization-form {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.autorization-input {
+    padding: 0 15px;
+    line-height: 30px;
+    margin-right: 30px;
+}
+
+.autorization-btns {
+    margin-top: 50px;
+}
